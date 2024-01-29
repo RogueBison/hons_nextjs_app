@@ -1,6 +1,5 @@
 
 # Martin Alexander | Hons Project 2023-2024 | Next.js Application 
----
 ## App Config
 
 Open a new terminal in VSC, then run these commands:
