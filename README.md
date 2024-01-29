@@ -1,5 +1,7 @@
 ## App Configuration
 
+Run these bash commands:
+
 - npm install
 - npm run dev
 
