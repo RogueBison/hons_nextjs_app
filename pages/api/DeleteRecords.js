@@ -8,7 +8,7 @@ export default async (req, res) => {
       const db = client.db("hons_load_test");
 
       // Delete all records in the collection
-      await db.collection('film').deleteMany({});
+      await db.collection('filmsNext').deleteMany({});
 
       // Respond with a success message
       res.status(200).json({ message: 'All records deleted successfully' });

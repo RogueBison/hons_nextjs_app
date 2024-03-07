@@ -6,7 +6,7 @@ export default async (req, res) => {
        const db = client.db("hons_load_test");
 
        const movies = await db
-           .collection("film")
+           .collection("filmsNext")
            .find({})
            .toArray();
 

@@ -45,10 +45,16 @@ const InsertButton = () => {
 
   return (
     <div>
+      <h3>Test 1</h3>
+      {renderButton(1, '1', '#333')}
+
+      <h3>Test 2</h3>
       {renderButton(10, '10', '#25b340')}
       {renderButton(100, '100', '#1e9635')}
       {renderButton(500, '500', '#1b852f')}
       {renderButton(1000, '1000', '#175723')}
+      {renderButton(2500, '2500', '#175723')}
+      {renderButton(5000, '5000', '#175723')}
       {renderButton(10000, '10,000', '#08210d')}
     </div>
   );

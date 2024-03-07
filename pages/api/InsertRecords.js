@@ -29,7 +29,7 @@ export default async (req, res) => {
         };
 
         // Perform the insertion
-        await db.collection('film').insertOne(dataToInsert);
+        await db.collection('filmsNext').insertOne(dataToInsert);
       }
 
       // Respond with a success message

@@ -28,12 +28,8 @@ const MovieList = () => {
       <br></br>
       <InsertButton />
       <br></br>
-      <DeleteButton />
-
-      <br></br>
-      <br></br>
-
       <h3>Amount of Records: {movies.length}</h3>
+      <DeleteButton />
     </div>
   );
 };
