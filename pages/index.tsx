@@ -1,4 +1,3 @@
-// pages/index.js
 import React from "react";
 import MovieList from "../components/MovieList";
 
