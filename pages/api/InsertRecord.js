@@ -1,21 +1,20 @@
 import clientPromise from "../../lib/mongodb";
 import { ObjectId } from "mongodb";
 
+export const config = {
+  api: {
+    responseLimit: false,
+  },
+}
+
 export default async (req, res) => {
   if (req.method === 'POST') {
     try {
-      const { quantity } = req.body;
-
-      if (!quantity || typeof quantity !== 'number') {
-        return res.status(400).json({ error: 'Invalid quantity provided' });
-      }
 
       // Connect to the database
       const client = await clientPromise;
       const db = client.db("hons_load_test");
 
-      // Insert specified record quantity using a for loop
-      for (let i = 0; i < quantity; i++) {
         // Generate a new ObjectId for each document
         const newObjectId = new ObjectId();
 
@@ -30,8 +29,7 @@ export default async (req, res) => {
 
         // Perform the insertion
         await db.collection('filmsNext').insertOne(dataToInsert);
-      }
-
+      
       // Respond with a success message
       res.status(200).json({ message: 'Records inserted successfully' });
     } catch (error) {

@@ -1,5 +1,11 @@
 import clientPromise from "../../lib/mongodb";
 
+export const config = {
+    api: {
+      responseLimit: false,
+    },
+  }
+
 export default async (req, res) => {
    try {
        const client = await clientPromise;
