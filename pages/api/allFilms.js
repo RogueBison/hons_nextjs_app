@@ -11,12 +11,12 @@ export default async (req, res) => {
        const client = await clientPromise;
        const db = client.db("hons_load_test");
 
-       const movies = await db
+       const films = await db
            .collection("filmsNext")
            .find({})
            .toArray();
 
-       res.json(movies);
+       res.json(films);
    } catch (e) {
        console.error(e);
    }

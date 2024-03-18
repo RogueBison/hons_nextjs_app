@@ -2,21 +2,21 @@ import React, { useState, useEffect } from "react";
 import InsertButton from "./InsertButton";
 import DeleteButton from "./DeleteButton";
 
-const MovieList = () => {
-  const [movies, setMovies] = useState([]);
+const Film = () => {
+  const [films, setFilms] = useState([]);
 
   useEffect(() => {
-    const fetchMovies = async () => {
+    const fetchFilms = async () => {
       try {
-        const response = await fetch("/api/movies");
+        const response = await fetch("/api/allFilms");
         const data = await response.json();
-        setMovies(data);
+        setFilms(data);
       } catch (error) {
-        console.error("Error fetching movies:", error);
+        console.error("Error fetching films:", error);
       }
     };
 
-    fetchMovies();
+    fetchFilms();
   }, []);
 
   return (
@@ -28,10 +28,10 @@ const MovieList = () => {
       <br></br>
       <InsertButton />
       <br></br>
-      <h3>Amount of Records: {movies.length}</h3>
+      <h3>Amount of Records: {films.length}</h3>
       <DeleteButton />
     </div>
   );
 };
 
-export default MovieList;
+export default Film;

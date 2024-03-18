@@ -1,10 +1,10 @@
 import React from "react";
-import MovieList from "../components/MovieList";
+import Film from "../components/Films";
 
 const Home = () => {
   return (
     <div>
-      <MovieList />
+      <Film />
     </div>
   );
 };

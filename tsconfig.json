@@ -15,6 +15,6 @@
     "isolatedModules": true,
     "jsx": "preserve"
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/api/movies.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/api/allFilms.js", "pages/index.jsx"], 
   "exclude": ["node_modules"]
 }
